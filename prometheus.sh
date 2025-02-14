@@ -35,3 +35,14 @@ systemctl daemon-reload
 systemctl start prometheus
 systemctl enable prometheus
 systemctl status prometheus
+
+
+# Remember add to your /etc/prometheus/prometheus.yml the config of the ports and where grabs the metrics:
+#   static_configs:
+#       - targets: ["localhost:9090","localhost:9216"]
+
+#   - job_name: 'vms'
+#     static_configs:
+#       - targets:
+#         - servername:9100
+#         - servername:9100
