@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to install node exporter just update it with the latest version.
+# Script to install node exporter. Just update it with the latest version.
 
 # Download and unpack
 curl -LO https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz
