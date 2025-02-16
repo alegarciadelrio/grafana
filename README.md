@@ -1,5 +1,5 @@
-# grafana
-This repository is a set of grafana installation scripts.
+# Grafana Toolbox
+This repository is a set of grafana related scripts.
 
 
 ## prometheus.sh
