@@ -2,7 +2,7 @@
 This repository is a set of grafana installation scripts.
 
 
-## prometheus.sh
+## prometheus.sh
 	
 Script to install Prometheus as a service.
 
