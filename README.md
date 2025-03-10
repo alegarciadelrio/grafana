@@ -1,4 +1,4 @@
-# Grafana Toolbox
+# 📊 Grafana Toolbox
 
 🔭 A collection of scripts for setting up and configuring Grafana monitoring infrastructure components.
 
@@ -9,7 +9,7 @@
   <img alt="Grafana" src="https://img.shields.io/badge/Grafana-%23F46800?style=flat-square&logo=grafana&logoColor=white" />
 </p>
 
-## Table of Contents
+## 📑 Table of Contents
 
 - [Overview](#overview)
 - [Scripts](#scripts)
@@ -23,29 +23,29 @@
 - [Requirements](#requirements)
 - [Contributing](#contributing)
 
-## Overview
+## 🔍 Overview
 
 This repository contains a set of scripts to help you set up and configure various components of a Grafana monitoring infrastructure. The scripts are designed to simplify the installation and configuration process of Prometheus, Node Exporter, and Nvidia GPU Exporter, which are essential components for collecting and visualizing metrics in Grafana.
 
 Grafana is an open-source platform for monitoring and observability that allows you to query, visualize, and alert on metrics from various data sources. This toolbox helps you set up the necessary components to collect and store metrics that can be visualized in Grafana dashboards.
 
-## Scripts
+## 📜 Scripts
 
-### prometheus.sh
+### 🔄 prometheus.sh
 
 Script to install Prometheus as a service on Linux systems. Prometheus is an open-source systems monitoring and alerting toolkit that collects and stores metrics as time series data.
 
-### node-exporter.sh
+### 📊 node-exporter.sh
 
 Script to install Node Exporter on Linux hosts. Node Exporter is a Prometheus exporter that collects hardware and OS metrics from *NIX kernels.
 
-### nvidia-gpu-exporter.ps1
+### 🎮 nvidia-gpu-exporter.ps1
 
 Script to install Nvidia GPU Exporter on Windows hosts. This exporter collects metrics from Nvidia GPUs for monitoring in Grafana.
 
-## Usage
+## 🚀 Usage
 
-### Setting up Prometheus
+### 🔧 Setting up Prometheus
 
 1. Edit the `prometheus.sh` script to change the version value in the "Download and unpack" section to your desired Prometheus version.
 2. Run the script as root:
@@ -56,7 +56,7 @@ sudo ./prometheus.sh
 
 This will install Prometheus as a service on your Linux system.
 
-### Installing Node Exporter
+### 📈 Installing Node Exporter
 
 1. Edit the `node-exporter.sh` script to change the version value in the "Download and unpack" section to your desired Node Exporter version.
 2. Run the script as root:
@@ -67,7 +67,7 @@ sudo ./node-exporter.sh
 
 This will install Node Exporter as a service on your Linux system, which will collect system metrics that can be scraped by Prometheus.
 
-### Installing Nvidia GPU Exporter
+### 🖥️ Installing Nvidia GPU Exporter
 
 1. Run the first part of the script as a regular user (without administrator privileges):
 
@@ -86,7 +86,7 @@ This will install Node Exporter as a service on your Linux system, which will co
 
 This will install the Nvidia GPU Exporter on your Windows system, which will collect GPU metrics that can be scraped by Prometheus.
 
-## Requirements
+## ⚙️ Requirements
 
 - For Linux scripts (`prometheus.sh` and `node-exporter.sh`):
   - Linux operating system
@@ -99,6 +99,6 @@ This will install the Nvidia GPU Exporter on your Windows system, which will col
   - Administrator access (for part of the installation)
   - Nvidia GPU with compatible drivers installed
 
-## Contributing
+## 👥 Contributing
 
 Contributions to improve the scripts or add new ones are welcome. Please feel free to submit a pull request or open an issue if you have any suggestions or find any bugs.
