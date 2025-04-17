@@ -13,9 +13,9 @@
 
 - [Overview](#overview)
 - [Scripts](#scripts)
-  - [prometheus.sh](#prometheussh)
-  - [node-exporter.sh](#node-exportersh)
-  - [nvidia-gpu-exporter.ps1](#nvidia-gpu-exporterps1)
+  - [Prometheus](#prometheus)
+  - [Node Exporter](#node-exporter)
+  - [Nvidia GPU Exporter](#nvidia-gpu-exporter)
 - [Usage](#usage)
   - [Setting up Prometheus](#setting-up-prometheus)
   - [Installing Node Exporter](#installing-node-exporter)
@@ -31,15 +31,15 @@ Grafana is an open-source platform for monitoring and observability that allows 
 
 ## 📜 Scripts
 
-### 🔄 prometheus.sh
+### 🔄 [Prometheus](./prometheus)
 
 Script to install Prometheus as a service on Linux systems. Prometheus is an open-source systems monitoring and alerting toolkit that collects and stores metrics as time series data.
 
-### 📊 node-exporter.sh
+### 📊 [Node Exporter](./node-exporter)
 
 Script to install Node Exporter on Linux hosts. Node Exporter is a Prometheus exporter that collects hardware and OS metrics from *NIX kernels.
 
-### 🎮 nvidia-gpu-exporter.ps1
+### 🎮 [Nvidia GPU Exporter](./nvidia-gpu-exporter)
 
 Script to install Nvidia GPU Exporter on Windows hosts. This exporter collects metrics from Nvidia GPUs for monitoring in Grafana.
 
@@ -47,8 +47,14 @@ Script to install Nvidia GPU Exporter on Windows hosts. This exporter collects m
 
 ### 🔧 Setting up Prometheus
 
-1. Edit the `prometheus.sh` script to change the version value in the "Download and unpack" section to your desired Prometheus version.
-2. Run the script as root:
+1. Navigate to the prometheus directory:
+
+```bash
+cd prometheus
+```
+
+2. Edit the `prometheus.sh` script to change the version value in the "Download and unpack" section to your desired Prometheus version.
+3. Run the script as root:
 
 ```bash
 sudo ./prometheus.sh
@@ -58,8 +64,14 @@ This will install Prometheus as a service on your Linux system.
 
 ### 📈 Installing Node Exporter
 
-1. Edit the `node-exporter.sh` script to change the version value in the "Download and unpack" section to your desired Node Exporter version.
-2. Run the script as root:
+1. Navigate to the node-exporter directory:
+
+```bash
+cd node-exporter
+```
+
+2. Edit the `node-exporter.sh` script to change the version value in the "Download and unpack" section to your desired Node Exporter version.
+3. Run the script as root:
 
 ```bash
 sudo ./node-exporter.sh
@@ -69,14 +81,20 @@ This will install Node Exporter as a service on your Linux system, which will co
 
 ### 🖥️ Installing Nvidia GPU Exporter
 
-1. Run the first part of the script as a regular user (without administrator privileges):
+1. Navigate to the nvidia-gpu-exporter directory:
+
+```bash
+cd nvidia-gpu-exporter
+```
+
+2. Run the first part of the script as a regular user (without administrator privileges):
 
 ```powershell
 # Run this part as a regular user
 .\nvidia-gpu-exporter.ps1
 ```
 
-2. Run the second part of the script as an administrator:
+3. Run the second part of the script as an administrator:
 
 ```powershell
 # Run this part as administrator
