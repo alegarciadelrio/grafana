@@ -16,10 +16,12 @@
   - [Prometheus](#prometheus)
   - [Node Exporter](#node-exporter)
   - [Nvidia GPU Exporter](#nvidia-gpu-exporter)
+  - [Grafana Ready-to-Go](#grafana-ready-to-go)
 - [Usage](#usage)
   - [Setting up Prometheus](#setting-up-prometheus)
   - [Installing Node Exporter](#installing-node-exporter)
   - [Installing Nvidia GPU Exporter](#installing-nvidia-gpu-exporter)
+  - [Using Grafana Ready-to-Go](#using-grafana-ready-to-go)
 - [Requirements](#requirements)
 - [Contributing](#contributing)
 
@@ -42,6 +44,10 @@ Script to install Node Exporter on Linux hosts. Node Exporter is a Prometheus ex
 ### 🎮 [Nvidia GPU Exporter](./nvidia-gpu-exporter)
 
 Script to install Nvidia GPU Exporter on Windows hosts. This exporter collects metrics from Nvidia GPUs for monitoring in Grafana.
+
+### 🐳 [Grafana Ready-to-Go](./grafana-ready-to-go)
+
+A pre-configured Docker Compose setup that deploys a complete monitoring solution with Grafana, Prometheus, and Node Exporter. This provides a quick way to get started with a full monitoring stack without manual installation of individual components.
 
 ## 🚀 Usage
 
@@ -104,6 +110,28 @@ cd nvidia-gpu-exporter
 
 This will install the Nvidia GPU Exporter on your Windows system, which will collect GPU metrics that can be scraped by Prometheus.
 
+### 🚀 Using Grafana Ready-to-Go
+
+1. Navigate to the grafana-ready-to-go directory:
+
+```bash
+cd grafana-ready-to-go
+```
+
+2. (Optional) Update the `prometheus.yml` file with your Grafana Cloud credentials if you want to use remote storage.
+
+3. Start the stack:
+
+```bash
+docker compose up -d
+```
+
+4. Access the services:
+   - Grafana: http://localhost:3000 (default credentials: admin/admin)
+   - Prometheus: http://localhost:9090
+
+This will start a complete monitoring stack with Grafana, Prometheus, and Node Exporter running in Docker containers.
+
 ## ⚙️ Requirements
 
 - For Linux scripts (`prometheus.sh` and `node-exporter.sh`):
@@ -116,6 +144,10 @@ This will install the Nvidia GPU Exporter on your Windows system, which will col
   - PowerShell
   - Administrator access (for part of the installation)
   - Nvidia GPU with compatible drivers installed
+
+- For Docker Compose setup (`grafana-ready-to-go`):
+  - Docker and Docker Compose installed
+  - Basic understanding of monitoring concepts
 
 ## 👥 Contributing
 
