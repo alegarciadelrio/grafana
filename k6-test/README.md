@@ -31,10 +31,15 @@ k6 run load.js
 k6 run stress.js
 ```
 
-The stress test file (`stress.js`) includes:
-- Higher virtual users (up to 1000)
-- Different request types (GET/POST)
-- Various endpoints
-- Randomized data generation
-- Longer test duration
-- More aggressive ramp-up
+### Spike Test
+```bash
+k6 run spike.js
+```
+
+The spike test file (`spike.js`) includes:
+- Multiple load spikes of increasing intensity
+- Baseline period before and after each spike
+- Three different spike levels (500, 1000, 2000 VUs)
+- Different endpoints and request types
+- Relaxed thresholds during spike periods
+- Recovery monitoring after spikes
