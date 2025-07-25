@@ -21,6 +21,20 @@ You can test this server using k6 by running your k6 tests against `http://local
 
 ## k6
 
+### Basic Load Test
 ```bash
 k6 run load.js
 ```
+
+### Stress Test
+```bash
+k6 run stress.js
+```
+
+The stress test file (`stress.js`) includes:
+- Higher virtual users (up to 1000)
+- Different request types (GET/POST)
+- Various endpoints
+- Randomized data generation
+- Longer test duration
+- More aggressive ramp-up
